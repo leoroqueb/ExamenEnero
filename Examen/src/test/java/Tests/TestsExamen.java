@@ -1,6 +1,6 @@
 package Tests;
 
-import Rle.Rle;
+import Rle.*;
 import org.junit.*;
 
 import java.util.ArrayList;
@@ -34,5 +34,16 @@ public class TestsExamen {
         ArrayList<String> a = new ArrayList<>();
 
         assertEquals(a,rle.encode(ejemplo));
+    }
+
+    @Test
+    public void _decodeEjemplo(){
+        String ejemplo = "aaabb";
+        Tupla a = new Tupla(3,'a');
+        Tupla b = new Tupla(2,'b');
+        ArrayList<Tupla> ej = new ArrayList<>();
+        ej.add(a);
+        ej.add(b);
+        assertEquals(ejemplo, rle.decode(ej));
     }
 }

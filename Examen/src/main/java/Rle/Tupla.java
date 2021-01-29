@@ -8,6 +8,7 @@ public class Tupla {
     private int cuenta;
     private ArrayList<String> tuplas = new ArrayList<>();
     private String texto;
+    private ArrayList<Tupla> tuplaDecode = new ArrayList<>();
 
     public Tupla(int cuenta, char caracter){
         this.caracter = caracter;
@@ -20,6 +21,9 @@ public class Tupla {
         return texto;
     }
 
+    public void addToArray(Tupla tupla){
+        tuplaDecode.add(tupla);
+    }
 
 
     public char getCaracter() {

@@ -30,5 +30,24 @@ public class Rle {
         return tuplas;
     }
 
+    public String decode(ArrayList<Tupla> tuplas){
+        String result = "";
+        for (int i = 0; i < tuplas.size(); i++) {
+            Tupla aux = tuplas.get(i);
+            int cuantasVeces = aux.getCuenta();
+            char letra = aux.getCaracter();
+            result += trascribir(cuantasVeces,letra);
+        }
+        return result;
+    }
+
+    private String trascribir(int a, char b){
+        String result = "";
+        for (int i = 0; i < a; i++) {
+            result += b;
+        }
+        return result;
+    }
+
 
 }
