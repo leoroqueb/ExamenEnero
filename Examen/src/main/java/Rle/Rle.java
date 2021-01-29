@@ -43,10 +43,10 @@ public class Rle {
         return result;
     }
 
-    private String trascribir(int a, char b){
+    private String trascribir(int nVeces, char letraARepetir){
         String result = "";
-        for (int i = 0; i < a; i++) {
-            result += b;
+        for (int i = 0; i < nVeces; i++) {
+            result += letraARepetir;
         }
         return result;
     }
