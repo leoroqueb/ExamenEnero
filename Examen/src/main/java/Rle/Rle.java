@@ -5,13 +5,12 @@ import java.util.ArrayList;
 public class Rle {
 
     private Tupla tupla;
-    private ArrayList<String> tuplas;
+    private ArrayList<String> tuplas = new ArrayList<>();
 
     public ArrayList<String> encode(String a){
         if (a.equals("")){
-            tuplas = new ArrayList<>();
+            return tuplas;
         }else {
-            tuplas = new ArrayList<>();
             char letra;
             for (int i = 0; i < a.length(); i++) {
                 letra = a.charAt(i);
@@ -21,13 +20,16 @@ public class Rle {
                     count++;
                     i++;
                 }
-                tupla = new Tupla(count, letra);
-                String b = tupla.toStr(tupla);
-
-                tuplas.add(b);
+                crearTuplaYmeterEnArraylist(count,letra);
             }
         }
         return tuplas;
+    }
+
+    public void crearTuplaYmeterEnArraylist(int cuenta, char letra){
+        tupla = new Tupla(cuenta, letra);
+        String b = tupla.toStr(tupla);
+        tuplas.add(b);
     }
 
     public String decode(ArrayList<Tupla> tuplas){
