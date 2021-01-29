@@ -27,4 +27,12 @@ public class TestsExamen {
         assertEquals(a,rle.encode(ejemplo));
 
     }
+
+    @Test
+    public void _noHayLetras(){
+        String ejemplo = "";
+        ArrayList<String> a = new ArrayList<>();
+
+        assertEquals(a,rle.encode(ejemplo));
+    }
 }

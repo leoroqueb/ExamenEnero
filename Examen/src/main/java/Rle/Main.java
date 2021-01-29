@@ -8,8 +8,9 @@ public class Main {
     private static ArrayList<String> resultado;
 
     public static void main(String[] args) {
-        ejemplos = new String[1];
+        ejemplos = new String[2];
         ejemplos[0] = "Hello world";
+        ejemplos[1] = "";
         for (String ejemplo : ejemplos) {
             resultado = rle.encode(ejemplo);
             System.out.println(resultado.toString());
