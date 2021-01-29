@@ -46,4 +46,11 @@ public class TestsExamen {
         ej.add(b);
         assertEquals(ejemplo, rle.decode(ej));
     }
+
+    @Test
+    public void _decodeEjemploSinNada(){
+        String ejemplo = "";
+        ArrayList<Tupla> ej = new ArrayList<>();
+        assertEquals(ejemplo, rle.decode(ej));
+    }
 }
